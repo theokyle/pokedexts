@@ -1,0 +1,29 @@
+{
+  "name": "pokedexts",
+  "version": "1.0.0",
+  "description": "Learning project in Typescript that builds a CLI Pokedex. Implements API requests and caching.",
+  "main": "index.js",
+  "type": "module",
+  "scripts": {
+    "build": "npx tsc",
+    "start": "node dist/main.js",
+    "dev": "npx tsc && node dist/main.js",
+    "test": "vitest --run"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/theokyle/pokedexts.git"
+  },
+  "keywords": [],
+  "author": "",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/theokyle/pokedexts/issues"
+  },
+  "homepage": "https://github.com/theokyle/pokedexts#readme",
+  "devDependencies": {
+    "@types/node": "^24.9.1",
+    "typescript": "^5.9.3",
+    "vitest": "^4.0.4"
+  }
+}
