@@ -13,11 +13,7 @@ export async function startREPL(state: State) {
         const [command, ...args] = words;
 
         if (state.commands[command]) {
-            try {
-                await state.commands[command].callback(state, args)
-            } catch (error) {
-                console.error(error)
-            }
+            await state.commands[command].callback(state, args)
         } else {
             console.log("Unknown command")
         }
