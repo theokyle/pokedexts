@@ -1,6 +1,6 @@
 import { State } from "./state";
 
-export function startREPL(state: State) {
+export async function startREPL(state: State) {
 
     state.readline.prompt()
     state.readline.on('line', async (input) => {
@@ -13,7 +13,11 @@ export function startREPL(state: State) {
         const command = words[0];
 
         if (state.commands[command]) {
-            state.commands[command].callback(state)
+            try {
+                await state.commands[command].callback(state)
+            } catch (error) {
+                console.error(error)
+            }
         } else {
             console.log("Unknown command")
         }
